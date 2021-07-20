@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="google-site-verification" content="" />
+  <meta name="referrer" content="unsafe-url">
+  
+  <title>node中的let</title>
+  <meta name="author" content="John Doe">
+  <meta name="description" content="手上node.js项目用pm2管理node进程。  
+重启服务，pm2 stop app停止进程，再用pm2 start ecosystem.json启动。  
+预订的6个进程并未全部开启，并且cpu占用奇高。查看pm2错误日志，里面错误如下：SyntaxError: Block-scoped de">
+  
+  
+  <meta property="og:title" content="node中的let"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:site_name" content="Notes"/>
+  <link href="/apple-touch-icon-precomposed.png" sizes="180x180" rel="apple-touch-icon-precomposed">
+  <link rel="alternate" href="/atom.xml" title="Notes" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/m.min.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <a id="top"></a>
+  <div id="main">
+    <div class="main-ctnr">
+      <div class="behind">
+  <a href="/" class="back black-color">
+    <svg class="i-close" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+        <path d="M2 30 L30 2 M30 30 L2 2"></path>
+    </svg>
+  </a>
+  
+</div>
+
+
+  <article class="standard post">
+    <div class="title">
+      
+  
+    <h1 class="page-title center">
+        node中的let
+    </h1>
+  
+
+
+    </div>
+    <div class="meta center">
+      <time datetime="2021-07-20T09:15:19.969Z" itemprop="datePublished">
+  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
+  </svg>
+  &nbsp;
+  2021-07-20
+</time>
+
+
+
+
+
+
+    </div>
+    <hr>
+    
+      
+    
+    <div class="picture-container">
+      
+    </div>
+    <p>手上node.js项目用pm2管理node进程。  </p>
+<p>重启服务，pm2 stop app停止进程，再用pm2 start ecosystem.json启动。  </p>
+<p>预订的6个进程并未全部开启，并且cpu占用奇高。查看pm2错误日志，里面错误如下：<br>SyntaxError: Block-scoped declarations (let, const, function, class) not yet supported outside strict mode  </p>
+<p>修改的代码恰好用到let关键字，至此，错误排查完毕。  </p>
+<p>查询node.js相关信息，如下：  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">所有的 ECMAScript 2015 (ES6) 功能将被分为三个部分 shipping，staged 和 in progress：</span><br><span class="line"></span><br><span class="line">所有 shipping：在 V8 引擎中认为是稳定的，转变成 Node.js 默认，并且 不会 需要任何运行时标记。</span><br><span class="line">Staged：这些是将要完成的特性，并且在 V8 团队看来并不一定稳定，需要一个 --harmony 标记。</span><br><span class="line">In progress：这些特性可以通过各自单独的 harmony 标记被激活使用。除非为了测试用途，否则绝不鼓励这样做。值得注意的是这些标记是借由 V8 引擎公开，将来或许会有潜在的变化而不会有任何免责声明或者协议。</span><br><span class="line"></span><br><span class="line">『shipping』 已经开启的 ES6 特性</span><br><span class="line">目前默认开启的 ES6 特性如下：</span><br><span class="line"></span><br><span class="line">Block scoping</span><br><span class="line">let (strict mode only)</span><br><span class="line">const</span><br><span class="line">function-in-blocks (strict mode only [1])</span><br><span class="line">Classes (strict mode only)</span><br><span class="line">Collections</span><br><span class="line">Map</span><br><span class="line">WeakMap</span><br><span class="line">Set</span><br><span class="line">WeakSet</span><br><span class="line">Typed arrays</span><br><span class="line">Generators</span><br><span class="line">Binary and Octal literals</span><br><span class="line">Object literal extensions (shorthand properties and methods)</span><br><span class="line">Promises</span><br><span class="line">New String methods</span><br><span class="line">Symbols</span><br><span class="line">Template strings</span><br><span class="line">Arrow Functions</span><br><span class="line">new.target [2]</span><br><span class="line">Object.assign</span><br><span class="line">Spread operator [2]</span><br></pre></td></tr></table></figure>
+
+<p><strong>所以，在非严格模式下的node.js中没法用let关键字</strong></p>
+<p>02 Nov 2018  </p>
+
+
+  </article>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <div class="busuanzi center">
+    page PV:&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;・&nbsp;
+    site PV:&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;・&nbsp;
+    site UV:&nbsp;<span id="busuanzi_value_site_uv"></span>
+  </div>
+
+
+    
+
+
+
+
+
+    </div>
+  </div>
+  <footer class="page-footer"><div class="clearfix">
+</div>
+<div class="right-foot">
+    <div class="firstrow">
+        <a href="#top" target="_self">
+        <svg class="i-caret-right" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M10 30 L26 16 10 2 Z"></path>
+        </svg>
+        </a>
+        © Notes 2015-2021
+    </div>
+    <div class="secondrow">
+        <a target="_blank" rel="noopener" href="https://github.com/yangfan1122">
+        Github
+        </a>
+    </div>
+</div>
+<div class="clearfix">
+</div>
+</footer>
+  <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script src="/js/search.min.js"></script>
+<script type="text/javascript">
+
+// disqus scripts
+
+
+// dropdown scripts
+$(".dropdown").click(function(event) {
+  var current = $(this);
+  event.stopPropagation();
+  $(current).children(".dropdown-content")[($(current).children(".dropdown-content").hasClass("open"))?'removeClass':'addClass']("open")
+});
+$(document).click(function(){
+    $(".dropdown-content").removeClass("open");
+})
+
+var path = "/search.xml";
+searchFunc(path, 'local-search-input', 'local-search-result');
+
+</script>
+
+</body>
+</html>

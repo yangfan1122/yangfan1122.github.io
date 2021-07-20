@@ -8,12 +8,13 @@
   <meta name="google-site-verification" content="" />
   <meta name="referrer" content="unsafe-url">
   
-  <title>Hello World</title>
+  <title>Loader.load()方法中的loaderContext参数</title>
   <meta name="author" content="John Doe">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+  <meta name="description" content="前提条件A.swf, B.swfAB同一工程里，AB共同使用X.as，发布A；X.as添加方法x()，B使用x()，发布B。A加载B。  
+1：Loader.load(new URLRequest(B.swfUrl));load方法第二个参数context为null时，已加载的内容保存在自己的安全域">
   
   
-  <meta property="og:title" content="Hello World"/>
+  <meta property="og:title" content="Loader.load()方法中的loaderContext参数"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:site_name" content="Notes"/>
   <link href="/apple-touch-icon-precomposed.png" sizes="180x180" rel="apple-touch-icon-precomposed">
@@ -43,14 +44,14 @@
       
   
     <h1 class="page-title center">
-        Hello World
+        Loader.load()方法中的loaderContext参数
     </h1>
   
 
 
     </div>
     <div class="meta center">
-      <time datetime="2021-07-20T07:18:00.962Z" itemprop="datePublished">
+      <time datetime="2021-07-20T08:27:42.767Z" itemprop="datePublished">
   <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
     <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
   </svg>
@@ -66,24 +67,18 @@
     </div>
     <hr>
     
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+      
     
     <div class="picture-container">
       
     </div>
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <p>前提条件<br>A.swf, B.swf<br>AB同一工程里，AB共同使用X.as，发布A；X.as添加方法x()，B使用x()，发布B。<br>A加载B。  </p>
+<p>1：Loader.load(new URLRequest(B.swfUrl));<br>load方法第二个参数context为null时，已加载的内容保存在自己的安全域中，此时A、B各自使用发布时的X.as。<br>此时不会报错。  </p>
+<p>2：Loader.load(new URLRequest(B.swfUrl), ApplicationDomain.currentDomain);<br>加载器自己的应用域（B在A的应用域）。A和B可以直接使用对方的类。A B共同使用X.as，则实际使用的是A发布时的X.as（修改前的X.as）。即“如果子级试图定义的类与父级已定义的类同名，则使用父类并忽略子类”。<br>此时B会报错，x()不是方法。  </p>
+<p>3：Loader.load(new URLRequest(B.swfUrl), new ApplicationDomain(ApplicationDomain.currentDomain));<br>默认值。允许B直接通过编写 new MyClassDefinedInParent() 来使用A的类。但是A则不能使用此语法；如果A要使用B的类，它必须调用 ApplicationDomain.getDefinition() 来检索它们。<br>此时B依旧会报错。  </p>
+<p>4：Loader.load(new URLRequest(B.swfUrl), new ApplicationDomain(null));<br>系统 ApplicationDomain 的子级。这将完全分离A和B，从而允许它们使用相同的名称定义各自版本的类并且不会产生冲突或隐藏。一方查看另一方的类的唯一方式是调用 ApplicationDomain.getDefinition() 方法。<br>此时不会报错。  </p>
+<p>SecurityDomain和ApplicationDomain<br>ApplicationDomain 类是分散的类定义组的一个容器。应用程序域用于划分位于同一个安全域中的类。已加载的类仅在其父级中没有相关定义时才进行定义。不能用较新的定义覆盖已加载的类定义。  </p>
+<p><a target="_blank" rel="noopener" href="https://github.com/yangfan1122/docs/blob/gh-pages/examples/2015-08-13-loaderContext_in_load_example.rar">源码</a><br>13 Aug 2015  </p>
 
 
   </article>
