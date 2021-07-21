@@ -1,563 +1,515 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="google-site-verification" content="" />
-  <meta name="referrer" content="unsafe-url">
-  
-  <title>Notes</title>
-  <meta name="author" content="John Doe">
-  
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:site_name" content="Notes"/>
-  <link href="/apple-touch-icon-precomposed.png" sizes="180x180" rel="apple-touch-icon-precomposed">
-  <link rel="alternate" href="/atom.xml" title="Notes" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/m.min.css">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
 
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
-  <a id="top"></a>
-  <div id="main">
-    <div class="main-ctnr">
-      <nav class="navbar">
-  <div class="nav-container">
-  <div class="nav navbar-nav navbar-left">
-    <div class="navbar-header">
-      <a href="/" class="navbar-brand">Notes</a>
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Notes</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" href="/about">
+        About</a>
+      
     </div>
-    
-
   </div>
-  <div id="site_search" class="" style="display: none;">
-  <input type="text" id="local-search-input" name="q" placeholder="search" class="form-control"/>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/tags"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" href="/about">
+          About
+        </a>
+      </li>
+    
+  </ul>
 </div>
-<div id="local-search-result"></div>
-
-
-
-  <div class="nav navbar-nav navbar-right">
-    <div class="dropdown">
-      <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-        <svg class="i-link" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M18 8 C18 8 24 2 27 5 30 8 29 12 24 16 19 20 16 21 14 17 M14 24 C14 24 8 30 5 27 2 24 3 20 8 16 13 12 16 11 18 15"></path>
-        </svg>
+      <div class="menu-nav">
+  
+  <div class="menu-navItem">
+    <div class="menu-navItem-tit">
+      <a href="/archives">
+        <span>
+          Archives</span>
       </a>
-      <base href="/">
-      <ul class="dropdown-content">
-        
-          <div>
-            <a target="_blank" rel="noopener" href="https://github.com/yangfan1122">
-        Github
+    </div>
+    <div class="menu-navItem-cont">
+        <div class="menu-navArchive-cont">
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a></li></ul>
+</div>
+    </div>
+  </div>
+  
+  <div class="menu-navItem">
+    <div class="menu-navItem-tit">
+      <a href="/tags">
+        <span>
+          Tags</span>
       </a>
     </div>
-     
-    </ul>
-    </div>
-    <div class="archives"><a href="/archives">
-      <svg class="i-archive" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-        <path d="M4 10 L4 28 28 28 28 10 M2 4 L2 10 30 10 30 4 Z M12 15 L20 15"></path>
-      </svg>
-    </a></div>
-  </div>
-  </div>
-</nav>
-
-<ul class="posts">
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2021/07/20/nodejs/let_in_nodejs/">
-            node中的let
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    手上node.js项目用pm2管理node进程。  
-重启服务，pm2 stop app停止进程，再用pm2 start ecosystem.json启动。  
-预订的6个进程并未全部开启，并且cpu占用奇高。查看pm2错误日志，里面错误如
-  
-  <a href="/2021/07/20/nodejs/let_in_nodejs/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2021-07-20T09:15:19.969Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2021-07-20
-</time>
-
-
-
-
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2021/07/20/typescript/TypeScriptWebStorm/">
-            TypeScript + WebStorm
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    ppt
-10 Jul 2017
-  
-  <a href="/2021/07/20/typescript/TypeScriptWebStorm/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2021-07-20T09:12:51.531Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2021-07-20
-</time>
-
-
-
-
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2021/07/20/others/rd/">
-            删除保留文件夹以外的其他文件夹
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    12345678@echo offset re=&quot;被保留文件夹&quot;pushd &quot;被保留文件夹目录&quot;for /f &quot;delims=&quot; %%a in (&#x27;dir /a/b^|f
-  
-  <a href="/2021/07/20/others/rd/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2021-07-20T09:10:37.628Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2021-07-20
-</time>
-
-
-
-
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2021/07/20/typescript/Detector.d.ts/">
-            Detector.d.ts
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    123456789101112131415// Type definitions for three.js (Detector.js)// Project: https://github.com/mrdoob/three.js/blob/m
-  
-  <a href="/2021/07/20/typescript/Detector.d.ts/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2021-07-20T09:08:03.506Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2021-07-20
-</time>
-
-
-
-
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2021/07/20/typescript/typescript/">
-            TypeScript
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    FileWatcherFile Watcher Arguments:  
-1--sourcemap $FilePath$ --out $ProjectFileDir$/bin/******.js --module amd --target 
-  
-  <a href="/2021/07/20/typescript/typescript/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2021-07-20T09:04:30.861Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2021-07-20
-</time>
-
-
-
-
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2021/07/20/others/rename_bat/">
-            批处理修改替换文件名
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    12345678@echo offset strtemp3=文件扩展名set strtemp1=被替换字符set strtemp2=替换字符setlocal enabledelayedexpansionfor /f &quot;delims
-  
-  <a href="/2021/07/20/others/rename_bat/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2021-07-20T09:02:03.561Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2021-07-20
-</time>
-
-
-
-
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2021/07/20/typescript/customevent/">
-            Typescript自定义事件
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    123456789101112export class E &#123;  public dispatcher: Element = document.createElement(&quot;dispatcher&quot;);  publ
-  
-  <a href="/2021/07/20/typescript/customevent/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2021-07-20T08:59:47.092Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2021-07-20
-</time>
-
-
-
-
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2021/07/20/javascript/removeEventListener_works_in_Object_Context/">
-            How does removeEventListener work in Object Context
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    1234567891011121314var obj = &#123;  handler: null,  myhandler: function() &#123;    console.log(&#x27;click&#x27;);    
-  
-  <a href="/2021/07/20/javascript/removeEventListener_works_in_Object_Context/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2021-07-20T08:57:53.263Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2021-07-20
-</time>
-
-
-
-
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2021/07/20/as3/gets_the_domain_after_redirect_action/">
-            获取视频重定向后的域
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    播视频，获取重定向后的域，办法很风骚～～ 可以解决像素级访问没有策略文件的问题仅限debug版flashplayer有效，发布版error.message只有错误码，无更多信息  
-来源
-12345678910111213141516171
-  
-  <a href="/2021/07/20/as3/gets_the_domain_after_redirect_action/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2021-07-20T08:52:53.566Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2021-07-20
-</time>
-
-
-
-
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-    
-<li class="post-item">
-  
-  
-    <h1 class="index-title">
-        <a href="/2021/07/20/html5/storejsplus/">
-            基于store.js实现的跨浏览器持久化数据方案。
-        </a>
-    </h1>
-  
-
-
-  <div class="excerpt">
-  
-    storejsplus概况基于store.js实现的跨浏览器持久化数据方案。
-详解webStorage（标准浏览器 + ie 8+） + userData （ie 6/7）。由于最近项目场景恰好需要sessionStorage，故将stor
-  
-  <a href="/2021/07/20/html5/storejsplus/">
-    more
-  </a>
-  </div>
-  <div class="index-meta">
-    <time datetime="2021-07-20T08:47:38.193Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2021-07-20
-</time>
-
-
-
-
-
-
-  </div>
-</li>
-<hr>
-
-
-
-
-
-  
-</ul>
-<ul class="pager">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next</a>
-</ul>
-
-
-    </div>
-  </div>
-  <footer class="page-footer"><div class="clearfix">
+    <div class="menu-navItem-cont">
+        <div class="menu-navTag-cont">
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/as3/" rel="tag">as3</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/" rel="tag">canvas</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5/" rel="tag">html5</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/" rel="tag">node.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/store-js/" rel="tag">store.js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/" rel="tag">typescript</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/userData/" rel="tag">userData</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webStorage/" rel="tag">webStorage</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6/" rel="tag">声明文件</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" rel="tag">批处理</a><span class="tag-list-count">2</span></li></ul>
 </div>
-<div class="right-foot">
-    <div class="firstrow">
-        <a href="#top" target="_self">
-        <svg class="i-caret-right" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-            <path d="M10 30 L26 16 10 2 Z"></path>
-        </svg>
-        </a>
-        © Notes 2015-2021
     </div>
-    <div class="secondrow">
-        <a target="_blank" rel="noopener" href="https://github.com/yangfan1122">
-        Github
-        </a>
+  </div>
+  
+</div>
+
+<div id="index-content" class="content">
+
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/07/20/nodejs/let_in_nodejs/">
+        node中的let
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-07-20 17:15:19" datetime="2021-07-20T09:15:19.969Z" itemprop="datePublished">
+  2021-07-20</time>
     </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/" rel="tag">node.js</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>手上node.js项目用pm2管理node进程。  </p>
+<p>重启服务，pm2 stop app停止进程，再用pm2 start ecosystem.json启动。  </p>
+<p>预订的6个进程并未全部开启，并且cpu占用奇高。查看pm2错误日志，里面错误如下：<br>SyntaxError: Block-scoped declarations (let, const, function, class) not yet supported outside strict mode  </p>
+<p>修改的代码恰好用到let关键字，至此，错误排查完毕。  </p>
+<p>查询node.js相关信息，如下：  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">所有的 ECMAScript 2015 (ES6) 功能将被分为三个部分 shipping，staged 和 in progress：</span><br><span class="line"></span><br><span class="line">所有 shipping：在 V8 引擎中认为是稳定的，转变成 Node.js 默认，并且 不会 需要任何运行时标记。</span><br><span class="line">Staged：这些是将要完成的特性，并且在 V8 团队看来并不一定稳定，需要一个 --harmony 标记。</span><br><span class="line">In progress：这些特性可以通过各自单独的 harmony 标记被激活使用。除非为了测试用途，否则绝不鼓励这样做。值得注意的是这些标记是借由 V8 引擎公开，将来或许会有潜在的变化而不会有任何免责声明或者协议。</span><br><span class="line"></span><br><span class="line">『shipping』 已经开启的 ES6 特性</span><br><span class="line">目前默认开启的 ES6 特性如下：</span><br><span class="line"></span><br><span class="line">Block scoping</span><br><span class="line">let (strict mode only)</span><br><span class="line">const</span><br><span class="line">function-in-blocks (strict mode only [1])</span><br><span class="line">Classes (strict mode only)</span><br><span class="line">Collections</span><br><span class="line">Map</span><br><span class="line">WeakMap</span><br><span class="line">Set</span><br><span class="line">WeakSet</span><br><span class="line">Typed arrays</span><br><span class="line">Generators</span><br><span class="line">Binary and Octal literals</span><br><span class="line">Object literal extensions (shorthand properties and methods)</span><br><span class="line">Promises</span><br><span class="line">New String methods</span><br><span class="line">Symbols</span><br><span class="line">Template strings</span><br><span class="line">Arrow Functions</span><br><span class="line">new.target [2]</span><br><span class="line">Object.assign</span><br><span class="line">Spread operator [2]</span><br></pre></td></tr></table></figure>
+
+<p><strong>所以，在非严格模式下的node.js中没法用let关键字</strong></p>
+<p>02 Nov 2018  </p>
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/07/20/typescript/TypeScriptWebStorm/">
+        TypeScript + WebStorm
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-07-20 17:12:51" datetime="2021-07-20T09:12:51.531Z" itemprop="datePublished">
+  2021-07-20</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typescript/" rel="tag">typescript</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p><a target="_blank" rel="noopener" href="https://github.com/yangfan1122/docs/blob/gh-pages/examples/2017-07-10-TypeScript.rar">ppt</a></p>
+<p>10 Jul 2017  </p>
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/07/20/others/rd/">
+        删除保留文件夹以外的其他文件夹
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-07-20 17:10:37" datetime="2021-07-20T09:10:37.628Z" itemprop="datePublished">
+  2021-07-20</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" rel="tag">批处理</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set re=&quot;被保留文件夹&quot;</span><br><span class="line">pushd &quot;被保留文件夹目录&quot;</span><br><span class="line">for /f &quot;delims=&quot; %%a in (&#x27;dir /a/b^|findstr/ixvc:%re:&quot; &quot;=&quot; /c:&quot;%&#x27;) do (</span><br><span class="line">if exist &quot;%%a\&quot; (</span><br><span class="line">rd /s /q &quot;%%a\&quot;</span><br><span class="line">) else echo del /a /f &quot;%%a&quot; 2&gt;nul</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>01 Apr 2017  </p>
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/07/20/typescript/Detector.d.ts/">
+        Detector.d.ts
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-07-20 17:08:03" datetime="2021-07-20T09:08:03.506Z" itemprop="datePublished">
+  2021-07-20</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typescript/" rel="tag">typescript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A3%B0%E6%98%8E%E6%96%87%E4%BB%B6/" rel="tag">声明文件</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Type definitions for three.js (Detector.js)</span></span><br><span class="line"><span class="comment">// Project: https://github.com/mrdoob/three.js/blob/master/examples/js/Detector.js</span></span><br><span class="line"><span class="comment">// Definitions by: Satoru Kimura</span></span><br><span class="line"><span class="comment">// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped</span></span><br><span class="line"><span class="keyword">interface</span> DetectorStatic &#123;</span><br><span class="line">  <span class="attr">canvas</span>: <span class="built_in">boolean</span>;</span><br><span class="line">  webgl: <span class="built_in">boolean</span>;</span><br><span class="line">  workers: <span class="built_in">boolean</span>;</span><br><span class="line">  fileapi: <span class="built_in">boolean</span>;</span><br><span class="line"></span><br><span class="line">  getWebGLErrorMessage(): HTMLElement;</span><br><span class="line">  addGetWebGLMessage(parameters?: &#123; id?: <span class="built_in">string</span>; parent?: HTMLElement &#125;): <span class="built_in">void</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">declare</span> <span class="keyword">var</span> Detector: DetectorStatic;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>24 Mar 2017  </p>
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/07/20/typescript/typescript/">
+        TypeScript
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-07-20 17:04:30" datetime="2021-07-20T09:04:30.861Z" itemprop="datePublished">
+  2021-07-20</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typescript/" rel="tag">typescript</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="FileWatcher"><a href="#FileWatcher" class="headerlink" title="FileWatcher"></a>FileWatcher</h2><p>File Watcher Arguments:  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--sourcemap $FilePath$ --out $ProjectFileDir$/bin/******.js --module amd --target ES5 --removeComments</span><br></pre></td></tr></table></figure>
+
+<p>build-in compiler Default options:  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--module amd --target ES5 --removeComments --outFile ./bin/******.js</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="tslint-json"><a href="#tslint-json" class="headerlink" title="tslint.json"></a>tslint.json</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   <span class="string">&quot;extends&quot;</span> : <span class="string">&quot;tslint:latest&quot;</span>,</span><br><span class="line">   <span class="string">&quot;rules&quot;</span> : &#123;</span><br><span class="line">      <span class="string">&quot;interface-name&quot;</span> : <span class="literal">false</span>,</span><br><span class="line">      <span class="string">&quot;max-line-length&quot;</span> : [<span class="literal">true</span>, <span class="number">540</span>],</span><br><span class="line">      <span class="string">&quot;member-ordering&quot;</span> : [<span class="literal">true</span>,</span><br><span class="line">         <span class="string">&quot;public-before-private&quot;</span>,</span><br><span class="line">         <span class="string">&quot;static-before-instance&quot;</span>,</span><br><span class="line">         <span class="string">&quot;variables-before-functions&quot;</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="string">&quot;comment-format&quot;</span>: [<span class="literal">false</span>,</span><br><span class="line">         <span class="string">&quot;check-space&quot;</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="string">&quot;whitespace&quot;</span> : [<span class="literal">false</span>,</span><br><span class="line">         <span class="string">&quot;whitespace&quot;</span>,</span><br><span class="line">         <span class="string">&quot;typedef-whitespace&quot;</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="string">&quot;typedef-whitespace&quot;</span>: [<span class="literal">true</span>, &#123;</span><br><span class="line">         <span class="string">&quot;call-signature&quot;</span>: <span class="string">&quot;nospace&quot;</span>,</span><br><span class="line">         <span class="string">&quot;index-signature&quot;</span>: <span class="string">&quot;nospace&quot;</span>,</span><br><span class="line">         <span class="string">&quot;parameter&quot;</span>: <span class="string">&quot;nospace&quot;</span>,</span><br><span class="line">         <span class="string">&quot;property-declaration&quot;</span>: <span class="string">&quot;nospace&quot;</span>,</span><br><span class="line">         <span class="string">&quot;variable-declaration&quot;</span>: <span class="string">&quot;nospace&quot;</span></span><br><span class="line">      &#125;]</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>05 Jan 2017  </p>
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/07/20/others/rename_bat/">
+        批处理修改替换文件名
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-07-20 17:02:03" datetime="2021-07-20T09:02:03.561Z" itemprop="datePublished">
+  2021-07-20</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%89%B9%E5%A4%84%E7%90%86/" rel="tag">批处理</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set strtemp3=文件扩展名</span><br><span class="line">set strtemp1=被替换字符</span><br><span class="line">set strtemp2=替换字符</span><br><span class="line">setlocal enabledelayedexpansion</span><br><span class="line">for /f &quot;delims=&quot; %%a in (&#x27;dir /a /b *.%strtemp3%&#x27;) do (</span><br><span class="line">set nobird=%%a</span><br><span class="line">ren &quot;%%~a&quot; &quot;!nobird:%strtemp1%=%strtemp2%!&quot;)</span><br></pre></td></tr></table></figure>
+<p>ps. 字符中包含汉字时，另存bat文件Encoding为ANSI即可。  </p>
+<p>10 Oct 2016  </p>
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/07/20/typescript/customevent/">
+        Typescript自定义事件
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-07-20 16:59:47" datetime="2021-07-20T08:59:47.092Z" itemprop="datePublished">
+  2021-07-20</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typescript/" rel="tag">typescript</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">E</span> </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> dispatcher: Element = <span class="built_in">document</span>.createElement(<span class="string">&quot;dispatcher&quot;</span>);</span><br><span class="line">  <span class="keyword">public</span> dispatch(event: <span class="built_in">string</span>): <span class="built_in">void</span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.dispatcher.dispatchEvent(<span class="keyword">new</span> Event(event));</span><br><span class="line">    &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">      <span class="keyword">let</span> evt = <span class="built_in">document</span>.createEvent(<span class="string">&quot;HTMLEvents&quot;</span>);<span class="comment">//IE</span></span><br><span class="line">      evt.initEvent(event, <span class="literal">false</span>, <span class="literal">true</span>);</span><br><span class="line">      <span class="built_in">this</span>.dispatcher.dispatchEvent(evt);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>06 Aug 2016  </p>
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/07/20/javascript/removeEventListener_works_in_Object_Context/">
+        How does removeEventListener work in Object Context
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-07-20 16:57:53" datetime="2021-07-20T08:57:53.263Z" itemprop="datePublished">
+  2021-07-20</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">handler</span>: <span class="literal">null</span>,</span><br><span class="line">  <span class="attr">myhandler</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;click&#x27;</span>);</span><br><span class="line">    <span class="built_in">this</span>.target.removeEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="built_in">this</span>.handler);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">target</span>: <span class="built_in">document</span>.getElementById(<span class="string">&#x27;BtnID&#x27;</span>),</span><br><span class="line">  <span class="attr">init</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.handler = <span class="built_in">this</span>.myhandler.bind(<span class="built_in">this</span>);</span><br><span class="line">    <span class="built_in">this</span>.target.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="built_in">this</span>.handler);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">obj.init();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>12 May 2016  </p>
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/07/20/as3/gets_the_domain_after_redirect_action/">
+        获取视频重定向后的域
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-07-20 16:52:53" datetime="2021-07-20T08:52:53.566Z" itemprop="datePublished">
+  2021-07-20</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/as3/" rel="tag">as3</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>播视频，获取重定向后的域，办法很风骚～～ 可以解决像素级访问没有策略文件的问题<br>仅限debug版flashplayer有效，发布版error.message只有错误码，无更多信息  </p>
+<p><a target="_blank" rel="noopener" href="http://jessewarden.com/2009/03/handling-crossdomainxml-and-302-redirects-using-netstream.html">来源</a></p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> bit: BitmapData = <span class="keyword">new</span> BitmapData(progressiveVideoPlayer.measuredWidth, progressiveVideoPlayer.measuredHeight, <span class="literal">false</span>, <span class="number">0x000000</span>);</span><br><span class="line">  bit.draw(progressiveVideoPlayer);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">catch</span> (error: SecurityError) &#123;</span><br><span class="line">  trace(<span class="string">&quot;error : &quot;</span> + error);</span><br><span class="line">  <span class="keyword">var</span> address: <span class="built_in">String</span>, <span class="attr">protocol</span>: <span class="built_in">String</span> = <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> _arr: <span class="built_in">Array</span> = error.toString().split(<span class="string">&quot; &quot;</span>)[<span class="number">5</span>].split(<span class="string">&quot;/&quot;</span>);</span><br><span class="line">    address = _arr[<span class="number">2</span>];</span><br><span class="line">    protocol = _arr[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">var</span> policyFileURL: <span class="built_in">String</span> = protocol + <span class="string">&quot;//&quot;</span> + address + <span class="string">&quot;/crossdomain.xml&quot;</span>;</span><br><span class="line">    Security.loadPolicyFile(policyFileURL);<span class="comment">//不会马上执行，在下次需要策略文件时才加载</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">catch</span> (error: <span class="built_in">Error</span>) &#123;</span><br><span class="line">    trace(error);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>20 Oct 2015  </p>
+
+    
+  </div>
+</article>
+  
+  <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/07/20/html5/storejsplus/">
+        基于store.js实现的跨浏览器持久化数据方案。
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-07-20 16:47:38" datetime="2021-07-20T08:47:38.193Z" itemprop="datePublished">
+  2021-07-20</time>
+    </div>
+    <div class="post-tag">
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/" rel="tag">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/store-js/" rel="tag">store.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/userData/" rel="tag">userData</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webStorage/" rel="tag">webStorage</a></li></ul>
+
+    </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="storejsplus"><a href="#storejsplus" class="headerlink" title="storejsplus"></a>storejsplus</h1><h2 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h2><p>基于<a target="_blank" rel="noopener" href="https://github.com/marcuswestin/store.js">store.js</a>实现的跨浏览器持久化数据方案。</p>
+<h2 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h2><p>webStorage（标准浏览器 + ie 8+） + userData （ie 6/7）。<br>由于最近项目场景恰好需要sessionStorage，故将store.js中默认的loaclStorage改为sessionStorage。具体方式可按需选择。</p>
+<h3 id="webStorage"><a href="#webStorage" class="headerlink" title="webStorage"></a>webStorage</h3><p>webStorage没什么好说，不过还是要留意下存储上限，不同浏览器间有差异，详见<a target="_blank" rel="noopener" href="http://dev-test.nemikor.com/web-storage/support-test/">http://dev-test.nemikor.com/web-storage/support-test/</a>。</p>
+<h3 id="userData"><a href="#userData" class="headerlink" title="userData"></a>userData</h3><p>userDate的存储上限却很麻烦，<a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/ms531424(v=vs.85).aspx">详见</a>。</p>
+<table>
+  <tbody>
+    <tr>
+      <th> Security Zone </th>
+      <th> Document Limit (KB) </th>
+      <th> Domain Limit (KB) </th>
+    </tr>
+    <tr>
+      <td> Local Machine </td>
+      <td> 128 </td>
+      <td> 1024 </td>
+    </tr>
+    <tr>
+      <td> Intranet </td>
+      <td> 512 </td>
+      <td> 10240 </td>
+    </tr>
+    <tr>
+      <td> Trusted Sites </td>
+      <td> 128 </td>
+      <td> 1024 </td>
+    </tr>
+    <tr>
+      <td> Internet </td>
+      <td> 128 </td>
+      <td> 1024 </td>
+    </tr>
+    <tr>
+      <td> Restricted </td>
+      <td> 64 </td>
+      <td> 640 </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>稳妥起见，将数据分割成最小的每片64K分别存储。仅数据分片还不行，还要为每个数据分片load一个StorageName。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">storage.load(store.userDataStorageName)</span><br></pre></td></tr></table></figure>
+<p>这样才会在用户本地生成相应的物理文件来存储数据。注意：不要轻易删除userdata的物理文件，否则浏览器可能报错，需要通过清IE缓存（有时候还需要重启电脑，原因未知，但确实解决了问题）解决。</p>
+<h3 id="跨目录访问"><a href="#跨目录访问" class="headerlink" title="跨目录访问"></a>跨目录访问</h3><p>跨目录暂时没用到，userDate可通过window.name处理，webStorage可通过Communication APIs处理，这里不再细说。</p>
+<h3 id="存储耗时"><a href="#存储耗时" class="headerlink" title="存储耗时"></a>存储耗时</h3><p>200K测试数据，webStorage仅2ms左右，userData每片64K，200K分四片，需要2000ms。</p>
+<h3 id="关于数据大小和字符长度的关系"><a href="#关于数据大小和字符长度的关系" class="headerlink" title="关于数据大小和字符长度的关系"></a>关于数据大小和字符长度的关系</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta charset=<span class="string">&quot;utf-8&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>utf-8是在Unicode基础上衍生出的可变长度字符编码，一个字符可占1-4个字节。</p>
+<p>规则：</p>
+<div>
+  <p> Unicode符号范围   |        UTF-8编码方式<br>
+    (十六进制)          |              （二进制）<br>
+    --------------------+---------------------------------------------<br>
+    0000 0000-0000 007F | 0xxxxxxx<br>
+    0000 0080-0000 07FF | 110xxxxx 10xxxxxx<br>
+    0000 0800-0000 FFFF | 1110xxxx 10xxxxxx 10xxxxxx<br>
+    0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</p>
+  <p>如果一个字节的第一位是0，则这个字节单独就是一个字符；如果第一位是1，则连续有多少个1，就表示当前字符占用多少个字节。</p>
 </div>
-<div class="clearfix">
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>在文本文件中使用UTF-8编码。</p>
+<p>var s = “一”;<br>s.charCodeAt(0).toString(16)为4e00，根据上表，“一”占3字节。</p>
+<p>utf-8有一个“头”，根据头编辑器选择合适的编码显示。例二个汉字“一二”，16进制查看为“EF BB BF E4 B8 80 E4 BA  8C ”，头3字节、一3字节、二3字节，共9字节。</p>
+<p>19 Oct 2015  </p>
+
+    
+  </div>
+</article>
+  
+
+  <div class="content-pagination">
+    
+    
+    <div class="next">
+      <a href="/page/2/">
+        <span>Next</span>
+      </a>
+      <i class="next-icon"></i>
+    </div>
+    
+
+  </div>
 </div>
-</footer>
-  <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
-<script src="/js/search.min.js"></script>
-<script type="text/javascript">
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    yangfan.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+    and
+    <a class="orangelink" href="https://github.com/" target="_blank" rel="">
+      hexo-theme-orange</a>
+  </span>
 
-// disqus scripts
+    </footer>
+    <div class="back-top" id="back-top">
+      <i class="back-top-icon"></i>
+    </div>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
 
+    
+<script src="/js/theme.js"></script>
 
-// dropdown scripts
-$(".dropdown").click(function(event) {
-  var current = $(this);
-  event.stopPropagation();
-  $(current).children(".dropdown-content")[($(current).children(".dropdown-content").hasClass("open"))?'removeClass':'addClass']("open")
-});
-$(document).click(function(){
-    $(".dropdown-content").removeClass("open");
-})
+    
+<script src="/js/index.js"></script>
 
-var path = "/search.xml";
-searchFunc(path, 'local-search-input', 'local-search-result');
-
-</script>
-
+  
+  </div>
 </body>
-</html>

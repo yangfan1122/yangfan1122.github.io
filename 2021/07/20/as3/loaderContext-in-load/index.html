@@ -1,77 +1,93 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="google-site-verification" content="" />
-  <meta name="referrer" content="unsafe-url">
-  
-  <title>Loader.load()方法中的loaderContext参数</title>
-  <meta name="author" content="John Doe">
-  <meta name="description" content="前提条件A.swf, B.swfAB同一工程里，AB共同使用X.as，发布A；X.as添加方法x()，B使用x()，发布B。A加载B。  
-1：Loader.load(new URLRequest(B.swfUrl));load方法第二个参数context为null时，已加载的内容保存在自己的安全域">
-  
-  
-  <meta property="og:title" content="Loader.load()方法中的loaderContext参数"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:site_name" content="Notes"/>
-  <link href="/apple-touch-icon-precomposed.png" sizes="180x180" rel="apple-touch-icon-precomposed">
-  <link rel="alternate" href="/atom.xml" title="Notes" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/m.min.css">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
+<link rel="stylesheet" href="/css/style.css">
 
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
-  <a id="top"></a>
-  <div id="main">
-    <div class="main-ctnr">
-      <div class="behind">
-  <a href="/" class="back black-color">
-    <svg class="i-close" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-        <path d="M2 30 L30 2 M30 30 L2 2"></path>
-    </svg>
-  </a>
-  
+
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Notes</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" href="/about">
+        About</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+        <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/tags"><span>
+            Tags</span></a>
+      </li>
+    
+    
+      <li class="barShow-item">
+        <a class="head-aboutLink" href="/about">
+          About
+        </a>
+      </li>
+    
+  </ul>
 </div>
-
-
-  <article class="standard post">
-    <div class="title">
-      
-  
-    <h1 class="page-title center">
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/07/20/as3/loaderContext-in-load/">
         Loader.load()方法中的loaderContext参数
+      </a>
     </h1>
-  
-
-
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-07-20 16:27:42" datetime="2021-07-20T08:27:42.767Z" itemprop="datePublished">
+  2021-07-20</time>
     </div>
-    <div class="meta center">
-      <time datetime="2021-07-20T08:27:42.767Z" itemprop="datePublished">
-  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
-  </svg>
-  &nbsp;
-  2021-07-20
-</time>
-
-
-
-
-
-
-    </div>
-    <hr>
-    
+    <div class="post-tag">
       
-    
-    <div class="picture-container">
-      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/as3/" rel="tag">as3</a></li></ul>
+
     </div>
+  </div>
+  <div class="article-entry" itemprop="articleBody">
+    
     <p>前提条件<br>A.swf, B.swf<br>AB同一工程里，AB共同使用X.as，发布A；X.as添加方法x()，B使用x()，发布B。<br>A加载B。  </p>
 <p>1：Loader.load(new URLRequest(B.swfUrl));<br>load方法第二个参数context为null时，已加载的内容保存在自己的安全域中，此时A、B各自使用发布时的X.as。<br>此时不会报错。  </p>
 <p>2：Loader.load(new URLRequest(B.swfUrl), ApplicationDomain.currentDomain);<br>加载器自己的应用域（B在A的应用域）。A和B可以直接使用对方的类。A B共同使用X.as，则实际使用的是A发布时的X.as（修改前的X.as）。即“如果子级试图定义的类与父级已定义的类同名，则使用父类并忽略子类”。<br>此时B会报错，x()不是方法。  </p>
@@ -80,65 +96,41 @@
 <p>SecurityDomain和ApplicationDomain<br>ApplicationDomain 类是分散的类定义组的一个容器。应用程序域用于划分位于同一个安全域中的类。已加载的类仅在其父级中没有相关定义时才进行定义。不能用较新的定义覆盖已加载的类定义。  </p>
 <p><a target="_blank" rel="noopener" href="https://github.com/yangfan1122/docs/blob/gh-pages/examples/2015-08-13-loaderContext_in_load_example.rar">源码</a><br>13 Aug 2015  </p>
 
-
-  </article>
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <div class="busuanzi center">
-    page PV:&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;・&nbsp;
-    site PV:&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;・&nbsp;
-    site UV:&nbsp;<span id="busuanzi_value_site_uv"></span>
+    
   </div>
+</article>
 
+    </div>
+    <footer class="footer-nav">
+      
+  <span class="footer-msg">
+    
+    
+    
+    <span class="timeDivide">-</span>
+    
+    yangfan.&nbsp;
+    Power by
+    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+    and
+    <a class="orangelink" href="https://github.com/" target="_blank" rel="">
+      hexo-theme-orange</a>
+  </span>
+
+    </footer>
+    <div class="back-top" id="back-top">
+      <i class="back-top-icon"></i>
+    </div>
+    
+  
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
 
     
+<script src="/js/theme.js"></script>
 
+    
+<script src="/js/index.js"></script>
 
-
-
-
-    </div>
+  
   </div>
-  <footer class="page-footer"><div class="clearfix">
-</div>
-<div class="right-foot">
-    <div class="firstrow">
-        <a href="#top" target="_self">
-        <svg class="i-caret-right" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
-            <path d="M10 30 L26 16 10 2 Z"></path>
-        </svg>
-        </a>
-        © Notes 2015-2021
-    </div>
-    <div class="secondrow">
-        <a target="_blank" rel="noopener" href="https://github.com/yangfan1122">
-        Github
-        </a>
-    </div>
-</div>
-<div class="clearfix">
-</div>
-</footer>
-  <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
-<script src="/js/search.min.js"></script>
-<script type="text/javascript">
-
-// disqus scripts
-
-
-// dropdown scripts
-$(".dropdown").click(function(event) {
-  var current = $(this);
-  event.stopPropagation();
-  $(current).children(".dropdown-content")[($(current).children(".dropdown-content").hasClass("open"))?'removeClass':'addClass']("open")
-});
-$(document).click(function(){
-    $(".dropdown-content").removeClass("open");
-})
-
-var path = "/search.xml";
-searchFunc(path, 'local-search-input', 'local-search-result');
-
-</script>
-
 </body>
-</html>
