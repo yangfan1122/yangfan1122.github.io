@@ -1,134 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    
-      <link rel="icon" href="/img/favicon.ico">
-    
-    <meta name="keyword"  content="">
-    
-<link rel="stylesheet" href="/css/style.css">
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="google-site-verification" content="" />
+  <meta name="referrer" content="unsafe-url">
+  
+  <title>较timer更为准确的倒计时方法</title>
+  <meta name="author" content="yangfan">
+  <meta name="description" content="Web前端技术笔记">
+  
+  
+  <meta property="og:title" content="较timer更为准确的倒计时方法"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:site_name" content="Notes"/>
+  <link href="/apple-touch-icon-precomposed.png" sizes="180x180" rel="apple-touch-icon-precomposed">
+  <link rel="alternate" href="/atom.xml" title="Notes" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/m.min.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
-
-  <div class="page">
-    <div class="head">
-      <header class="head-header">
-  <h1 class="head-authorH">
-    <a href="/" class="head-authorLink">
-      Notes</a>
-  </h1>
-  <div class="head-right">
-    <!-- <div class="head-search">
-      <input class="head-searchK"></input>
-      <span class="head-searchT">
-        </span>
-    </div> -->
-    <button class="barWrap" id="barWrap-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-    <div class="head-about" id="head-about">
-      
-      <a class="head-aboutLink" href="/about">
-        About</a>
-      
-    </div>
-  </div>
-</header>
-    </div>
-    <div class="main">
-        <div class="barShow-head" id="barShow">
-  <ul class="barShow-ul">
-    
-      <li class="barShow-item">
-        <a href="/archives"><span>
-            Archives</span></a>
-      </li>
-    
-      <li class="barShow-item">
-        <a href="/tags"><span>
-            Tags</span></a>
-      </li>
-    
-    
-      <li class="barShow-item">
-        <a class="head-aboutLink" href="/about">
-          About
-        </a>
-      </li>
-    
-  </ul>
+  <a id="top"></a>
+  <div id="main">
+    <div class="main-ctnr">
+      <div class="behind">
+  <a href="/" class="back black-color">
+    <svg class="i-close" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+        <path d="M2 30 L30 2 M30 30 L2 2"></path>
+    </svg>
+  </a>
+  
 </div>
-      <article class="post" id="post">
-  <header class="post-head">
-    <h1 class="post-title">
-      <a class="title" href="/2021/07/20/as3/countdown/">
-        较timer更为准确的倒计时方法
-      </a>
-    </h1>
-  </header>
-  <div class="post-datetag">
-    <div class="post-date">
-      <time class="post-time" title="2021-07-20 16:38:49" datetime="2021-07-20T08:38:49.868Z" itemprop="datePublished">
-  2021-07-20</time>
-    </div>
-    <div class="post-tag">
+
+
+  <article class="standard post">
+    <div class="title">
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/as3/" rel="tag">as3</a></li></ul>
+  
+    <h1 class="page-title center">
+        较timer更为准确的倒计时方法
+    </h1>
+  
+
 
     </div>
-  </div>
-  <div class="article-entry" itemprop="articleBody">
+    <div class="meta center">
+      <time datetime="2021-07-20T08:38:49.868Z" itemprop="datePublished">
+  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
+  </svg>
+  &nbsp;
+  2021-07-20
+</time>
+
+
+
+
+
     
+    &nbsp;
+    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"></circle>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
+    </svg>
+    &nbsp;
+    <a href="/tags/as3/">as3</a>
+
+
+    </div>
+    <hr>
+    
+      
+    
+    <div class="picture-container">
+      
+    </div>
     <p>从同事处得来一较为准确的倒计时方法。  </p>
 <p>Timer的计时由于帧频原因或者CPU占用过高，会随着时间推移而越发不准确。<br>应对办法之一就是每隔一段时间(例如300ms)校正一次，进而达到接近准确的目的。  </p>
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">var</span> countdownTimer:Timer = <span class="keyword">new</span> Timer(<span class="number">300</span>);</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">var</span> timestamp:<span class="built_in">Number</span> = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">var</span> countdowns:<span class="built_in">Array</span> = [];</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">var</span> countdownSeconds : Dictionary = <span class="keyword">new</span> Dictionary();</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">addCountdown</span>(<span class="params">method:<span class="built_in">Function</span>, second:<span class="built_in">Number</span></span>):<span class="title">void</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">var</span> index:int = countdowns.indexOf(method);</span><br><span class="line">  <span class="keyword">if</span> (index &gt;= <span class="number">0</span>)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (!countdownTimer.hasEventListener(TimerEvent.TIMER))</span><br><span class="line">  &#123;</span><br><span class="line">    countdownTimer.addEventListener(TimerEvent.TIMER, countDownHandler);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (!countdownTimer.running)</span><br><span class="line">  &#123;</span><br><span class="line">    timestamp = getTimer();</span><br><span class="line">    countdownTimer.start();</span><br><span class="line">  &#125;</span><br><span class="line">  countdowns.push(method);</span><br><span class="line">  countdownSeconds[method] = second;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">removeCountdown</span>(<span class="params">method:<span class="built_in">Function</span></span>):<span class="title">void</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (method == <span class="literal">null</span>)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> index:int = countdowns.indexOf(method);</span><br><span class="line">  <span class="keyword">if</span> (index &gt;= <span class="number">0</span>)</span><br><span class="line">  &#123;</span><br><span class="line">    countdowns.splice(index, <span class="number">1</span>);</span><br><span class="line">    countdownSeconds[method] = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">delete</span> countdownSeconds[method];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (countdowns.length == <span class="number">0</span>)</span><br><span class="line">  &#123;</span><br><span class="line">    countdownTimer.stop();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">countDownHandler</span>(<span class="params">e:TimerEvent</span>):<span class="title">void</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">var</span> remain:<span class="built_in">Number</span> = (getTimer() - timestamp) * <span class="number">0.001</span>;</span><br><span class="line">  timestamp = getTimer();</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i:int = <span class="number">0</span>; i &lt; countdowns.length; i++)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">var</span> func:<span class="built_in">Function</span> = countdowns[i];</span><br><span class="line">    <span class="keyword">var</span> second:<span class="built_in">Number</span> = countdownSeconds[func];</span><br><span class="line">    second -= remain;</span><br><span class="line">    func(second);</span><br><span class="line">    countdownSeconds[func] = second;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>21 Aug 2015  </p>
 
-    
+
+  </article>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <div class="busuanzi center">
+    page PV:&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;・&nbsp;
+    site PV:&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;・&nbsp;
+    site UV:&nbsp;<span id="busuanzi_value_site_uv"></span>
   </div>
-</article>
+
+
+    
+
+
+
+
 
     </div>
-    <footer class="footer-nav">
-      
-  <span class="footer-msg">
-    
-    
-    
-    <span class="timeDivide">-</span>
-    
-    yangfan.&nbsp;
-    Power by
-    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
-    and
-    <a class="orangelink" href="https://github.com/" target="_blank" rel="">
-      hexo-theme-orange</a>
-  </span>
-
-    </footer>
-    <div class="back-top" id="back-top">
-      <i class="back-top-icon"></i>
-    </div>
-    
-  
-  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
-
-    
-<script src="/js/theme.js"></script>
-
-    
-<script src="/js/index.js"></script>
-
-  
   </div>
+  <footer class="page-footer"><div class="clearfix">
+</div>
+<div class="right-foot">
+    <div class="firstrow">
+        <a href="#top" target="_self">
+        <svg class="i-caret-right" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M10 30 L26 16 10 2 Z"></path>
+        </svg>
+        </a>
+        © Notes 2015-2021
+    </div>
+    <div class="secondrow">
+        <a target="_blank" rel="noopener" href="https://github.com/yangfan1122">
+        Github
+        </a>
+    </div>
+</div>
+<div class="clearfix">
+</div>
+</footer>
+  <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script src="/js/search.min.js"></script>
+<script type="text/javascript">
+
+// disqus scripts
+
+
+// dropdown scripts
+$(".dropdown").click(function(event) {
+  var current = $(this);
+  event.stopPropagation();
+  $(current).children(".dropdown-content")[($(current).children(".dropdown-content").hasClass("open"))?'removeClass':'addClass']("open")
+});
+$(document).click(function(){
+    $(".dropdown-content").removeClass("open");
+})
+
+var path = "/search.xml";
+searchFunc(path, 'local-search-input', 'local-search-result');
+
+</script>
+
 </body>
+</html>

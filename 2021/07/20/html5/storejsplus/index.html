@@ -1,93 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    
-      <link rel="icon" href="/img/favicon.ico">
-    
-    <meta name="keyword"  content="">
-    
-<link rel="stylesheet" href="/css/style.css">
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="google-site-verification" content="" />
+  <meta name="referrer" content="unsafe-url">
+  
+  <title>基于store.js实现的跨浏览器持久化数据方案。</title>
+  <meta name="author" content="yangfan">
+  <meta name="description" content="Web前端技术笔记">
+  
+  
+  <meta property="og:title" content="基于store.js实现的跨浏览器持久化数据方案。"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:site_name" content="Notes"/>
+  <link href="/apple-touch-icon-precomposed.png" sizes="180x180" rel="apple-touch-icon-precomposed">
+  <link rel="alternate" href="/atom.xml" title="Notes" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/m.min.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
-
-  <div class="page">
-    <div class="head">
-      <header class="head-header">
-  <h1 class="head-authorH">
-    <a href="/" class="head-authorLink">
-      Notes</a>
-  </h1>
-  <div class="head-right">
-    <!-- <div class="head-search">
-      <input class="head-searchK"></input>
-      <span class="head-searchT">
-        </span>
-    </div> -->
-    <button class="barWrap" id="barWrap-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-    <div class="head-about" id="head-about">
-      
-      <a class="head-aboutLink" href="/about">
-        About</a>
-      
-    </div>
-  </div>
-</header>
-    </div>
-    <div class="main">
-        <div class="barShow-head" id="barShow">
-  <ul class="barShow-ul">
-    
-      <li class="barShow-item">
-        <a href="/archives"><span>
-            Archives</span></a>
-      </li>
-    
-      <li class="barShow-item">
-        <a href="/tags"><span>
-            Tags</span></a>
-      </li>
-    
-    
-      <li class="barShow-item">
-        <a class="head-aboutLink" href="/about">
-          About
-        </a>
-      </li>
-    
-  </ul>
+  <a id="top"></a>
+  <div id="main">
+    <div class="main-ctnr">
+      <div class="behind">
+  <a href="/" class="back black-color">
+    <svg class="i-close" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+        <path d="M2 30 L30 2 M30 30 L2 2"></path>
+    </svg>
+  </a>
+  
 </div>
-      <article class="post" id="post">
-  <header class="post-head">
-    <h1 class="post-title">
-      <a class="title" href="/2021/07/20/html5/storejsplus/">
-        基于store.js实现的跨浏览器持久化数据方案。
-      </a>
-    </h1>
-  </header>
-  <div class="post-datetag">
-    <div class="post-date">
-      <time class="post-time" title="2021-07-20 16:47:38" datetime="2021-07-20T08:47:38.193Z" itemprop="datePublished">
-  2021-07-20</time>
-    </div>
-    <div class="post-tag">
+
+
+  <article class="standard post">
+    <div class="title">
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/" rel="tag">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/store-js/" rel="tag">store.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/userData/" rel="tag">userData</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webStorage/" rel="tag">webStorage</a></li></ul>
+  
+    <h1 class="page-title center">
+        基于store.js实现的跨浏览器持久化数据方案。
+    </h1>
+  
+
 
     </div>
-  </div>
-  <div class="article-entry" itemprop="articleBody">
+    <div class="meta center">
+      <time datetime="2021-07-20T08:47:38.193Z" itemprop="datePublished">
+  <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
+  </svg>
+  &nbsp;
+  2021-07-20
+</time>
+
+
+
+
+
     
+    &nbsp;
+    <svg class="i-tag" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <circle cx="24" cy="8" r="2"></circle>
+      <path d="M2 18 L18 2 30 2 30 14 14 30 Z"></path>
+    </svg>
+    &nbsp;
+    <a href="/tags/html5/">html5</a>·<a href="/tags/webStorage/">webStorage</a>·<a href="/tags/userData/">userData</a>·<a href="/tags/store-js/">store.js</a>
+
+
+    </div>
+    <hr>
+    
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#storejsplus"><span class="toc-text">storejsplus</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%86%B5"><span class="toc-text">概况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%A6%E8%A7%A3"><span class="toc-text">详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#webStorage"><span class="toc-text">webStorage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#userData"><span class="toc-text">userData</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%A8%E7%9B%AE%E5%BD%95%E8%AE%BF%E9%97%AE"><span class="toc-text">跨目录访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E8%80%97%E6%97%B6"><span class="toc-text">存储耗时</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%A4%A7%E5%B0%8F%E5%92%8C%E5%AD%97%E7%AC%A6%E9%95%BF%E5%BA%A6%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="toc-text">关于数据大小和字符长度的关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-text">测试</span></a></li></ol></li></ol></li></ol>
+    
+    <div class="picture-container">
+      
+    </div>
     <h1 id="storejsplus"><a href="#storejsplus" class="headerlink" title="storejsplus"></a>storejsplus</h1><h2 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h2><p>基于<a target="_blank" rel="noopener" href="https://github.com/marcuswestin/store.js">store.js</a>实现的跨浏览器持久化数据方案。</p>
 <h2 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h2><p>webStorage（标准浏览器 + ie 8+） + userData （ie 6/7）。<br>由于最近项目场景恰好需要sessionStorage，故将store.js中默认的loaclStorage改为sessionStorage。具体方式可按需选择。</p>
 <h3 id="webStorage"><a href="#webStorage" class="headerlink" title="webStorage"></a>webStorage</h3><p>webStorage没什么好说，不过还是要留意下存储上限，不同浏览器间有差异，详见<a target="_blank" rel="noopener" href="http://dev-test.nemikor.com/web-storage/support-test/">http://dev-test.nemikor.com/web-storage/support-test/</a>。</p>
@@ -151,48 +146,65 @@
 <p>utf-8有一个“头”，根据头编辑器选择合适的编码显示。例二个汉字“一二”，16进制查看为“EF BB BF E4 B8 80 E4 BA  8C ”，头3字节、一3字节、二3字节，共9字节。</p>
 <p>19 Oct 2015  </p>
 
-    
+
+  </article>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <div class="busuanzi center">
+    page PV:&nbsp;<span id="busuanzi_value_page_pv"></span>&nbsp;・&nbsp;
+    site PV:&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;・&nbsp;
+    site UV:&nbsp;<span id="busuanzi_value_site_uv"></span>
   </div>
-</article>
 
-    <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#storejsplus"><span class="post-toc-number">1.</span> <span class="post-toc-text">storejsplus</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%A6%82%E5%86%B5"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">概况</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%AF%A6%E8%A7%A3"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">详解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webStorage"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">webStorage</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#userData"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">userData</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%B7%A8%E7%9B%AE%E5%BD%95%E8%AE%BF%E9%97%AE"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">跨目录访问</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AD%98%E5%82%A8%E8%80%97%E6%97%B6"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">存储耗时</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%A4%A7%E5%B0%8F%E5%92%8C%E5%AD%97%E7%AC%A6%E9%95%BF%E5%BA%A6%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">关于数据大小和字符长度的关系</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">测试</span></a></li></ol></li></ol></li></ol>
-        </nav>
-    </aside>
-   
+
+    
+
+
+
+
+
     </div>
-    <footer class="footer-nav">
-      
-  <span class="footer-msg">
-    
-    
-    
-    <span class="timeDivide">-</span>
-    
-    yangfan.&nbsp;
-    Power by
-    <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
-    and
-    <a class="orangelink" href="https://github.com/" target="_blank" rel="">
-      hexo-theme-orange</a>
-  </span>
-
-    </footer>
-    <div class="back-top" id="back-top">
-      <i class="back-top-icon"></i>
-    </div>
-    
-  
-  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
-
-    
-<script src="/js/theme.js"></script>
-
-    
-<script src="/js/index.js"></script>
-
-  
   </div>
+  <footer class="page-footer"><div class="clearfix">
+</div>
+<div class="right-foot">
+    <div class="firstrow">
+        <a href="#top" target="_self">
+        <svg class="i-caret-right" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+            <path d="M10 30 L26 16 10 2 Z"></path>
+        </svg>
+        </a>
+        © Notes 2015-2021
+    </div>
+    <div class="secondrow">
+        <a target="_blank" rel="noopener" href="https://github.com/yangfan1122">
+        Github
+        </a>
+    </div>
+</div>
+<div class="clearfix">
+</div>
+</footer>
+  <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script src="/js/search.min.js"></script>
+<script type="text/javascript">
+
+// disqus scripts
+
+
+// dropdown scripts
+$(".dropdown").click(function(event) {
+  var current = $(this);
+  event.stopPropagation();
+  $(current).children(".dropdown-content")[($(current).children(".dropdown-content").hasClass("open"))?'removeClass':'addClass']("open")
+});
+$(document).click(function(){
+    $(".dropdown-content").removeClass("open");
+})
+
+var path = "/search.xml";
+searchFunc(path, 'local-search-input', 'local-search-result');
+
+</script>
+
 </body>
+</html>
