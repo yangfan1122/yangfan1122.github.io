@@ -106,7 +106,7 @@
 <ul>
 <li><p>删除本地verdaccio storage下所有包<br>只更新本次需要的包，避免重复导入</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// win7</span><br><span class="line">C:\Users\用户名\AppData\Roaming\verdaccio\storage</span><br><span class="line"></span><br><span class="line">// win10</span><br><span class="line">C:\Users\用户名\.config\verdaccio\storage</span><br></pre></td></tr></table></figure></li>
-<li><p>随便一个空目录，安装需要的npm包</p>
+<li><p>新建空目录（不要在已有node_modules的目录下安装，verdaccio可能会同步到只含有package.json的包），安装需要的npm包</p>
 </li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i 包名</span><br></pre></td></tr></table></figure>
