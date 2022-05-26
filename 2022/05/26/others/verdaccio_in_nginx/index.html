@@ -53,12 +53,12 @@
 
     </div>
     <div class="meta center">
-      <time datetime="2022-03-03T10:25:18.336Z" itemprop="datePublished">
+      <time datetime="2022-05-26T02:43:34.596Z" itemprop="datePublished">
   <svg class="i-calendar" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
     <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9"></path>
   </svg>
   &nbsp;
-  2022-03-03
+  2022-05-26
 </time>
 
 
@@ -91,7 +91,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 start /npm全局安装路径/verdaccio/bin/verdaccio</span><br></pre></td></tr></table></figure></li>
 <li><p>nginx 反向代理</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">  listen       80;</span><br><span class="line">  server_name  域名;</span><br><span class="line">  charset utf-8;</span><br><span class="line">  </span><br><span class="line">  location / &#123;</span><br><span class="line">    proxy_pass http://127.0.0.1:4873/;</span><br><span class="line">    proxy_set_header Host            $host:$server_port;</span><br><span class="line">    proxy_set_header X-Forwarded-For $remote_addr;</span><br><span class="line">    proxy_set_header X-Forwarded-Proto $scheme;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://verdaccio.org/docs/reverse-proxy#run-behind-reverse-proxy-with-different-domain-and-port">三个proxy_set_header必须设置，否则verdaccio会从相对路径请求资源。</a> </p>
+<p><a target="_blank" rel="noopener" href="https://verdaccio.org/docs/reverse-proxy#run-behind-reverse-proxy-with-different-domain-and-port">三个proxy_set_header必须设置，否则verdaccio会从相对路径请求资源。</a></p>
 </li>
 </ul>
 <h3 id="配置生效"><a href="#配置生效" class="headerlink" title="配置生效"></a>配置生效</h3><ul>
