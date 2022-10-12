@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>安装RDP Wrapper、自动升级</title>
+      <link href="/2022/10/12/others/rdpwrapper/"/>
+      <url>/2022/10/12/others/rdpwrapper/</url>
+      
+        <content type="html"><![CDATA[<ul><li>下载<a href="https://github.com/stascorp/rdpwrap/releases">RDPWrap-v1.6.2.zip</a>，解压到”C:\Program Files\RDP Wrapper”<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">不要解压到其他目录</span><br></pre></td></tr></table></figure></li><li>下载<a href="https://github.com/asmtron/rdpwrap/raw/master/autoupdate.zip">autoupdate.zip</a>，解压到”C:\Program Files\RDP Wrapper”</li><li>管理员权限运行以下文件设置开机启动<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramFiles\RDP Wrapper\helper\autoupdate__enable_autorun_on_startup.bat</span><br></pre></td></tr></table></figure></li><li>确保杀毒软件忽略”C:\Program Files\RDP Wrapper”目录，避免文件被删除</li><li>管理员权限运行”C:\ProgramFiles\RDP Wrapper\autoupdate.bat”，安装并升级RDP Wrapper</li><li>运行RDPConf.exe，检测是否支持当前win10版本。提示”[fully supported]”则成功。</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> win10 </tag>
+            
+            <tag> 多账户同时登录远程桌面 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Nginx部署verdaccio</title>
       <link href="/2022/05/26/others/verdaccio_in_nginx/"/>
       <url>/2022/05/26/others/verdaccio_in_nginx/</url>
@@ -91,27 +112,6 @@
         <tags>
             
             <tag> 小程序 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>安装RDP Wrapper、自动升级</title>
-      <link href="/2021/07/21/others/rdpwrapper/"/>
-      <url>/2021/07/21/others/rdpwrapper/</url>
-      
-        <content type="html"><![CDATA[<ul><li>下载<a href="https://github.com/stascorp/rdpwrap/releases">RDPWrap-v1.6.2.zip</a>，解压到”C:\Program Files\RDP Wrapper”<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">不要解压到其他目录</span><br></pre></td></tr></table></figure></li><li>下载<a href="https://github.com/asmtron/rdpwrap/raw/master/autoupdate.zip">autoupdate.zip</a>，解压到”C:\Program Files\RDP Wrapper”</li><li>管理员权限运行以下文件设置开机启动<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\ProgramFiles\RDP Wrapper\helper\autoupdate__enable_autorun_on_startup.bat</span><br></pre></td></tr></table></figure></li><li>确保杀毒软件忽略”C:\Program Files\RDP Wrapper”目录，避免文件被删除</li><li>管理员权限运行”C:\ProgramFiles\RDP Wrapper\autoupdate.bat”，安装并升级RDP Wrapper</li><li>运行RDPConf.exe，检测是否支持当前win10版本。提示”[fully supported]”则成功。</li></ul>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> win10 </tag>
-            
-            <tag> 多账户同时登录远程桌面 </tag>
             
         </tags>
       
